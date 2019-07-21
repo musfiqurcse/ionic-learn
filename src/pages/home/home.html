@@ -1,14 +1,38 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      {{ foo }}
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
+  {{ bar }}
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+   {{ getText() }}
   </p>
+  <ion-item>
+    <button ion-button (click)="calculate()" color="warning">
+      Calculate me
+    </button>
+    <h5>
+      {{ result_item }}
+    </h5>
+  </ion-item>
+  <ion-item>
+    <ion-input type="number" [(ngModel)]="firstNumber"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="number" [(ngModel)]="secondNumber"></ion-input>
+  </ion-item>
+  <ion-item>
+    <button ion-button (click)="findSum()" color="warning">
+      Find Sum
+    </button>
+    <h5>
+      {{ sumItem }}
+    </h5>
+  </ion-item>
+
 </ion-content>
