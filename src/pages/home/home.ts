@@ -8,6 +8,7 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
   foo = 'My hello world';
   bar = 'Hello My World';
+  newBucket = ['This', 'is', 'my' , 'first', 'second'];
   firstNumber=  '0';
   secondNumber= '0';
   result_item = 0;
