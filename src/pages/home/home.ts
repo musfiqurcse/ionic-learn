@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { SecondPage } from '../second/second';
+import { ThirdPage } from '../third/third';
 
 @Component({
   selector: 'page-home',
@@ -13,8 +15,13 @@ export class HomePage {
   secondNumber= '0';
   result_item = 0;
   sumItem = 0;
+  tab1: any;
+  tab2: any;
+  tab3: any;
   constructor(public navCtrl: NavController) {
-
+    this.tab1 = SecondPage;
+    this.tab2 = ThirdPage;
+    this.tab3 = HomePage
   }
 
   getText(){
@@ -29,5 +36,8 @@ export class HomePage {
   }
   findSum(){
     this.sumItem = parseInt(this.firstNumber) + parseInt(this.secondNumber);
+  }
+  goToNext(){
+    this.navCtrl.push(SecondPage, {name: 'Musfiq', age: 80})
   }
 }
